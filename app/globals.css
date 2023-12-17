@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap');
+
+:root{
+  --mainColor:#d5af80
+}
+
+.navBoxShadow{
+  box-shadow:rgb(220, 221, 222) 0px 0px 20px 1px ;
+  
+}
+
+.checkBox-Custom .css-dev-only-do-not-override-q03t6k.ant-checkbox .ant-checkbox-inner:after{
+  height: 8.142857px;
+}
+
+.customTabs .css-dev-only-do-not-override-q03t6k.ant-tabs-small >.ant-tabs-nav .ant-tabs-tab{
+  width: 100px;
+}
+
+.customTabs  .css-dev-only-do-not-override-q03t6k.ant-tabs .ant-tabs-tab{
+  justify-content: center;
+}
