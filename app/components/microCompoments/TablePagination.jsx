@@ -2,6 +2,9 @@ import { LikeOutlined, MessageOutlined, StarOutlined } from "@ant-design/icons";
 import React from "react";
 import { Avatar, List, Space } from "antd";
 import Image from "next/image";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ weight:"400", subsets: ["latin"] })
 
 const data = Array.from({
   length: 23,
@@ -27,10 +30,9 @@ const TablePagination = () => {
     <List
       itemLayout="vertical"
       style={{
-        fontFamily:
-          "Poppins,linkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji",
-      }}
+        fontFamily:"'__Poppins_8c1529', '__Poppins_Fallback_8c1529' !important"}}
       size="large"
+      className="table-menu"
       pagination={{
         onChange: (page) => {
           console.log(page);
@@ -46,13 +48,13 @@ const TablePagination = () => {
       renderItem={(item, index) => {
         console.log(index);
         return index == 1 ? (
-          <div className="flex flex-col justify-start">
+          <div className="flex flex-col justify-start px-5 table-menu">
             <div className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 md:my-5 rounded-xl shadow-lg p-3 max-w-xs md:max-w-5xl mx-auto border border-white bg-white">
-              <div className="w-full  bg-white grid place-items-center md:w-2/5 max-w-2/5 object-cover overflow-hidden max-h-80 rounded-xl">
+              <div className="w-full bg-white grid place-items-center md:w-2/5 max-w-2/5 object-cover overflow-hidden max-h-80 rounded-xl">
                 <img
                   src="https://shadiyana-vendor-images.s3.ap-south-1.amazonaws.com/venues/lahore/47/WhatsApp%20Image%202023-07-17%20at%2010.16.49%20AM.webp?auto=format&fit=max&w=3840"
                   alt="tailwind logo"
-                  className=""
+                  className="rounded-xl"
                 />
               </div>
               <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
@@ -133,13 +135,13 @@ const TablePagination = () => {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col justify-start">
+          <div className="flex flex-col justify-start px-5">
             <div className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 md:my-5 rounded-xl shadow-lg p-3 max-w-xs md:max-w-5xl mx-auto border border-white bg-white">
               <div className="w-full  bg-white grid place-items-center md:w-2/5 max-w-2/5 object-cover overflow-hidden max-h-80 rounded-xl">
                 <img
                   src="https://shadiyana-vendor-images.s3.ap-south-1.amazonaws.com/venues/lahore/47/WhatsApp%20Image%202023-07-17%20at%2010.16.49%20AM.webp?auto=format&fit=max&w=3840"
                   alt="tailwind logo"
-                  className=""
+                  className="rounded-xl"
                 />
               </div>
               <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
@@ -200,14 +202,14 @@ const TablePagination = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <div className="bg-mainColor px-2 py-2 text-white rounded-lg">
+                <div className="flex items-center justify-start  w-100 flex-wrap">
+                  <div className="bg-mainColor px-2 py-2 text-white rounded-lg text-lg">
                     31 Dec Available
                   </div>
-                  <div className="bg-red-300 text-red-700 py-1 px-1 mb-2 rounded-lg">
+                  <div className="bg-red-300 text-red-700 py-1 px-1 mb-1 rounded-lg text-lg md:ml-1">
                     December Dates Discounted
                   </div>
-                  <div className="font-bold text-secColor py-2 px-2 rounded-lg">
+                  <div className="font-bold text-secColor py-2 px-2 rounded-lg text-lg">
                     December Dates Discounted
                   </div>
                 </div>

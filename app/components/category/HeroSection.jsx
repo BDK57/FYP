@@ -12,8 +12,8 @@ const HeroSection = () => {
   return (
     <ConfigProvider theme={theme}>
       <div className="container mx-auto px-5">
-        <div className="mainSection flex">
-          <div className="w-3/12">
+        <div className="mainSection flex flex-col lg:flex-row">
+          <div className="w-100 lg:w-3/12">
             <p className="text-xl capitalize text-paraColor">filter</p>
 
             <Divider className="bg-gray-300" style={{ marginTop: "0.5rem" }} />
@@ -151,7 +151,7 @@ const HeroSection = () => {
             />
           </div>
 
-          <div className="w-4/5 ">
+          <div className="w-100 lg:w-4/5">
             <TablePagination />
           </div>
         </div>
