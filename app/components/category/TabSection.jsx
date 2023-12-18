@@ -5,6 +5,7 @@ import { Divider } from "antd";
 import theme from "../../../theme/themeConfig";
 import Image from "next/image";
 import { ConfigProvider } from "antd";
+import Icon_deatil from "../microCompoments/Icon_deatil";
 const data = [
   {
     label: "Details",
@@ -44,97 +45,66 @@ const data = [
 
         <Divider className="bg-gray-300" />
 
-        <div data-profile="details" className="profile_detailscontainer__3dGx-" style={{ display: "block" }}>
+        <div className="flex items-start gap-4 flex-col">
           <div className="profile_infoheading__1nChc">
-            <h2 className="text-xl font-bold">Details</h2>
+            <h2 className="text-2xl font-bold">Details</h2>
           </div>
-          <div className="profile_details__LPp88 grid grid-cols-2 gap-x-16 gap-y-5">
-            <div className="profile_detail__2X3nM">
-              <Image src='assets/icons/venue_type.svg' width={18} height={18}
-
-                alt="wedding photographers Makeup artists henna mehndi catering decor wedding venues  Profile Icons"></Image>
-
-              <div className="profile_detailtext__vI83J">
-                <h3>venue type</h3>
-                <div>Marquee/Banquet</div>
-              </div>
-            </div>
-            <div className="profile_detail__2X3nM">
-
-              <Image src='assets/icons/amenities-logo.svg' width={18} height={18}
-
-                alt="wedding photographers Makeup artists henna mehndi catering decor wedding venues  Profile Icons"></Image>
-
-              <div className="profile_detailtext__vI83J">
-                <h3>amenities</h3>
-                <div>Bridal Room, Groom Room, Washrooms, Valet, Security Guards</div>
-              </div>
-            </div>
-            <div className="profile_detail__2X3nM">
-              <Image src='assets/icons/parking_space.svg' width={18} height={18}
-
-                alt="wedding photographers Makeup artists henna mehndi catering decor wedding venues  Profile Icons"></Image>
-
-              <div className="profile_detailtext__vI83J">
-                <h3>parking space</h3>
-                <div>500</div>
-              </div>
-            </div>
-            <div className="profile_detail__2X3nM">
-              <Image src='assets/icons/catering.svg' width={18} height={18}
-
-                alt="wedding photographers Makeup artists henna mehndi catering decor wedding venues  Profile Icons"></Image>
-
-
-              <div className="profile_detailtext__vI83J">
-                <h3>catering</h3>
-                <div>Internal</div>
-              </div>
-            </div>
-            <div className="profile_detail__2X3nM">
-              <Image src='assets/icons/wheelchair_accessible.svg' width={18} height={18}
-
-                alt="wedding photographers Makeup artists henna mehndi catering decor wedding venues  Profile Icons"></Image>
-
-
-              <div className="profile_detailtext__vI83J">
-                <h3>wheelchair accessible</h3>
-                <div>Yes</div>
-              </div>
-            </div>
-            <div className="profile_detail__2X3nM">
-              <Image src='assets/icons/staff.svg' width={18} height={18}
-
-                alt="wedding photographers Makeup artists henna mehndi catering decor wedding venues  Profile Icons"></Image>
-
-
-              <div className="profile_detailtext__vI83J">
-                <h3>staff</h3>
-                <div>Male, Female</div>
-              </div>
-            </div>
-          </div>
-          <div style={{ margin: "20px 0" }} className="profile_detail__2X3nM">
-            <img
-              src="/icons/profile/description.svg"
-              alt="wedding photographers Makeup artists henna mehndi catering decor wedding venues  Description Icon"
+          <div className=" grid grid-cols-2 gap-x-16 gap-y-5">
+            <Icon_deatil srcIcon="assets/icons/venue_type.svg" alt="Icons" title="venue type" para="Marquee/Banquet" />
+            <Icon_deatil
+              srcIcon="assets/icons/amenities-logo.svg"
+              alt="Icons"
+              title="amenities"
+              para="Bridal Room, Groom Room, Washrooms, Valet, Security Guards"
             />
-            <div className="profile_detailtext__vI83J">
-              <h2>Description</h2>
-              <div>
-                White Rose Marquee, an elegant vintage themed event space and your ideal location for weddings, engagement parties, corporate events,
-                bridal and baby showers, anniversaries, birthday parties and more.{" "}
-              </div>
-            </div>
+
+            <Icon_deatil srcIcon="assets/icons/parking_space.svg" alt="Icons" title="parking space" para="500" />
+            <Icon_deatil srcIcon="assets/icons/catering.svg" alt="Icons" title="catering" para="Internal" />
+            <Icon_deatil srcIcon="assets/icons/wheelchair_accessible.svg" alt="Icons" title="wheelchair accessible" para="Yes" />
+            <Icon_deatil srcIcon="assets/icons/staff.svg" alt="Icons" title="staff" para="Male, Female" />
           </div>
-          <div style={{ margin: "20px 0" }} className="profile_detail__2X3nM">
-            <img
-              src="/icons/profile/additional-info.svg"
-              alt="wedding photographers Makeup artists henna mehndi catering decor wedding venues Additional Information Icon"
+          <div className="mt-3">
+            <Icon_deatil
+              srcIcon="assets/icons/description.svg"
+              alt="Icons"
+              title="Description"
+              para="White Rose Marquee, an elegant vintage themed event space and your ideal location for weddings, engagement parties, corporate events, bridal and baby showers, anniversaries, birthday parties and more. "
             />
-            <div className="profile_detailtext__vI83J">
-              <h2>Additional Information</h2>
-              <div>100% payment is required 10 days before the event</div>
+
+            <Icon_deatil
+              srcIcon="assets/icons/description.svg"
+              alt="Icons"
+              title="Additional Information"
+              para="100% payment is required 10 days before the event"
+            />
+          </div>
+        </div>
+
+        <Divider className="bg-gray-300" />
+
+        <div className="flex items-start flex-col ">
+          <h1 className="text-2xl font-bold">Verify Pricing</h1>
+
+          <div className="profile_deals__1ZwS0 bg-mainColor
+    h-28
+    mx-4
+    flex;
+    flex-row
+    justify-center
+    items-center
+  " style={{  backgroundImage: "url(assets/icons/golden-sparkle-2.svg)",
+  backgroundPosition: 'right 100px top 100px;',
+  backgroundRepeat:"repeat",
+  backgroundSize: '1.5em 1.5em'}}>
+            <div className="profile_dealTextContainer__2woy2">
+              <div className="profile_dealHeadlineContainer__28yb5">
+                <div className="profile_dealHeadline__v7jMF">Deals</div>
+                <div className="profile_dealTitle__3O5lA">: Free customized 3 tiered wedding cake</div>
+              </div>
+              <div className="profile_dealText__2f7yP">Only available on Shadiyana. T&amp;Cs apply.</div>
+            </div>
+            <div className="profile_dealButtonContainer__1Wm28">
+              <button className="profile_dealButton__tUeq3">Get Discount</button>
             </div>
           </div>
         </div>
