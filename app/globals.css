@@ -4,7 +4,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap'); */
 
 :root{
-  --mainColor:#d5af80
+  --mainColor:#dfaf80;
 }
 
 .table-menu .css-dev-only-do-not-override-q03t6k[class^="ant-spin"], .table-menu .css-dev-only-do-not-override-q03t6k[class*=" ant-spin"]{
@@ -25,4 +25,16 @@
 
 .customTabs  .css-dev-only-do-not-override-q03t6k.ant-tabs .ant-tabs-tab{
   justify-content: center;
+}
+
+@keyframes profile_pulse__1Z_on {
+  0% {
+      transform: scale(.95);
+      box-shadow: 0 2px 2px rgba(0,0,0,.2)
+  }
+
+  to {
+      transform: scale(1);
+      box-shadow: 0 2px 2px rgba(0,0,0,.2)
+  }
 }

@@ -1,7 +1,7 @@
 
 const theme = {
     token: {
-        colorPrimary: "#d5af80",
+        colorPrimary: "#dfaf80",
         colorInfo: "#d5af80",
         colorSuccess: "#2f4d4b",
         fontSize: 16,
