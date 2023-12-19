@@ -1,4 +1,4 @@
-// File: E:\Fyp Work\Work 18 Dec 2023\FYP\app\inner-page\page.js
+// File: D:\FYP WORK\Work 19 Dec 2023\FYP\app\inner-page\page.js
 import * as entry from '../../../../app/inner-page/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

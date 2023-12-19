@@ -38,3 +38,42 @@
       box-shadow: 0 2px 2px rgba(0,0,0,.2)
   }
 }
+
+.customMask{
+opacity: 1 !important;
+font-size: 30px; font-family: 'Poppins', sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+
+font-weight: 600;
+}
+
+
+.imageViewPortionOne .ant-image{
+  height: 220px;
+  width: 100%;
+  /* height: 285px; */
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  position: static !important;
+  display: block !important;
+}
+.imageViewPortionOne img{
+  height: 100% !important;
+  width: 100% !important;
+  -o-object-fit: cover !important;
+  object-fit: cover !important;
+  overflow: hidden;
+} 
+
+.standrad-btn-normal-border-radius{
+  color: #fff;
+  border: none;
+  background-color: var(--mainColor);
+  font-family: poppins,sans-serif;
+  font-size: 13.7px;
+  border-radius: 8px;
+  padding: 10px 9px;
+  margin: 20px 7px 1em 0.2em;
+  width: fit-content;
+  
+
+}
