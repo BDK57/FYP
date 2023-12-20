@@ -1,4 +1,6 @@
 {
-  "/inner-page/page": "app/inner-page/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/booking/page": "app/booking/page.js",
+  "/page": "app/page.js",
+  "/catalog/page": "app/catalog/page.js",
+  "/inner-page/page": "app/inner-page/page.js"
 }

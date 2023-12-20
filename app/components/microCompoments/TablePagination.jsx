@@ -3,13 +3,15 @@ import React from "react";
 import { Avatar, List, Space } from "antd";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
+Link
 
 const poppins = Poppins({ weight:"400", subsets: ["latin"] })
 
 const data = Array.from({
   length: 23,
 }).map((_, i) => ({
-  href: "https://ant.design",
+  href: "/inner-page",
   title: `Hassan Banquet Hall ${i}`,
   avatar: `https://xsgames.co/randomusers/avatar.php?g=pixel&key=${i}`,
   description:
@@ -138,11 +140,15 @@ const TablePagination = () => {
           <div className="flex flex-col justify-start px-5">
             <div className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 md:my-5 rounded-xl shadow-lg p-3 max-w-xs md:max-w-5xl mx-auto border border-white bg-white">
               <div className="w-full  bg-white grid place-items-center md:w-2/5 max-w-2/5 object-cover overflow-hidden max-h-80 rounded-xl">
+              <Link href={item.href}>
+                
                 <img
                   src="https://shadiyana-vendor-images.s3.ap-south-1.amazonaws.com/venues/lahore/47/WhatsApp%20Image%202023-07-17%20at%2010.16.49%20AM.webp?auto=format&fit=max&w=3840"
                   alt="tailwind logo"
                   className="rounded-xl"
                 />
+                </Link>
+               
               </div>
               <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
                 <div className="flex justify-between item-center">

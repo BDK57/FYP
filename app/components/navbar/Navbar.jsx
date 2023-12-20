@@ -47,8 +47,8 @@ const Navbar = () => {
       <div className='border-mainColor border rounded-3xl flex items-center justify-center p-2 mr-3 md:mr-0'>
       <MessageOutlined className='text-xl text-mainColor' style={{color:"var(--mainColor)"}}/>
       </div>
-      <Link href='/google' className='md:block hidden'>
-      <Button type="primary" >Sign In</Button>
+      <Link href='/user/login' className='md:block hidden'>
+      <Button type="primary"  >Sign In</Button>
       
       </Link>
       </div>

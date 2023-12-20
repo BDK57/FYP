@@ -1360,15 +1360,8 @@ const TabSection = () => {
   return (
     <ConfigProvider theme={theme}>
       <div className="container mx-auto px-5">
-        <div className="mainSection flex mt-5 md:gap-10">
-          <div className="w-2/4">
-            <div className="">
-              {/* <h4>ReactJS Ant-Design ConfigProvider Component</h4>  */}
-              <Tabs items={data} />
-            </div>
-          </div>
-
-          <div className="w-2/4">
+        <div className="mainSection flex flex-col mt-5 md:gap-1">
+        <div className="w-11/12 mx-auto">
             <div className="flex justify-end items-baseline">
               <ShareAltOutlined style={{ color: "var(--mainColor)", fontWeight: "600", fontSize: "12px" }} />
               <h3 className="text-sm px-2">Share</h3>
@@ -1382,16 +1375,16 @@ const TabSection = () => {
               </div></Link>
 
             <ImageCollage />
-            <div className="flex justify-end relative mt-5">
+            <div className="flex justify-end flex-col  mt-5">
               <div className="left flex justify-end space-x-2">
                 <Button className='border-mainColor' style={{ borderColor: "#d5af80", color: 'var(--mainColor)' }} >Send Message</Button>
-                <Link href='/google' className='md:block hidden'>
+                <Link href='/booking' className='md:block hidden'>
                   <Button type="primary" >Book Now</Button>
 
                 </Link>
 
               </div>
-              <div className="right-0 absolute w-full text-left">
+              <div className="w-full text-left">
                 <h2 className="text-lg font-semibold text-mainColor my-3">Price Range</h2>
                 <h2 className="text-xl font-bold my-3">PKR 2,700 - PKR 6,400</h2>
                 <p className="text-sm px-5 py-2 w-fit  bg-gray-100 text-secColor my-3">Mention Shadiyana to get a good deal</p>
@@ -1406,6 +1399,14 @@ const TabSection = () => {
               </div>
             </div>
           </div>
+          <div className="w-full">
+            <div className="">
+              {/* <h4>ReactJS Ant-Design ConfigProvider Component</h4>  */}
+              <Tabs items={data} />
+            </div>
+          </div>
+
+         
         </div>
       </div>
     </ConfigProvider>
