@@ -2,8 +2,8 @@
 import React, { useState } from 'react'
 import { Button, ConfigProvider } from "antd";
 
-import { Switch } from "antd";
 import theme from "@/theme/themeConfig";
+import { Switch } from "antd";
 import Link from 'next/link';
 import { MenuOutlined ,CloseOutlined,MessageOutlined} from '@ant-design/icons';
 
