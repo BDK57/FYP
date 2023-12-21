@@ -83,12 +83,13 @@ const BookingSection = () => {
     const [secondToggle, setsecondToggle] = useState(true);
     const [thirdToggle, setsthirdToggle] = useState(true);
     const [fourToggle, setsfourToggle] = useState(true);
+    const [fiveToggle, setsfiveToggle] = useState(true);
 
     return (
 
         <ConfigProvider theme={theme}>
             {console.log(firstToggle, secondToggle, thirdToggle, fourToggle)}
-            <div className="container w-full relative">
+            <div className="container w-full relative mx-auto">
                 <div className="flex h-full justify-between ">
                     <div className="flex  mt-5 w-7/12 flex-col justify-end items-center">
 
@@ -252,7 +253,83 @@ const BookingSection = () => {
 
                             </div>
                         </div>
-                        <div className={`absolute top-10 flex flex-col w-5/6  ${fourToggle && "hidden"}`}>
+                        <div className={`absolute top-10 flex flex-col w-5/6   ${fourToggle && "hidden"}`}>
+                            <div className="w-full flex justify-between flex-col gap-10 mt-5 items-center">
+                            <div className="w-full  grid grid-cols-2 gap-4 border-2 border-dashed border-secColor-800 p-8 rounded-xl" style={{boxShadow: "rgba(60, 70, 85, 0.2) 0px 0px 6px 6px inset"}} >
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Booked Vendor</h2>
+                                    <p className='text-base'>{'<Booked Hall Name>'}</p>
+                                  </div>
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Contact Number</h2>
+                                    <p className='text-base'>{'<Contact Number of Customer>'}</p>
+                                  </div>
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Booking Name</h2>
+                                    <p className='text-base'>{'<Booking Name>'}</p>
+                                  </div>
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Selected Event Slot</h2>
+                                    <p className='text-base'>{'Timming Slot Evening / Morning'}</p>
+                                    
+                                  </div>
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Selected Event Date</h2>
+                                    
+                                    <p className='text-base'>{'Date When You Booking'}</p>
+                                  </div>
+                                  
+                                </div>
+                                <div className="w-full flex flex-col items-start justify-between gap-4">
+                                <h3 className='text-start font-semibold text-lg'>Package</h3>
+                                <div className="w-full  grid grid-cols-2 gap-4 border-2 border-dashed border-secColor-800 p-8 rounded-xl" style={{boxShadow: "rgba(60, 70, 85, 0.2) 0px 0px 6px 6px inset"}} >
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Booked Vendor</h2>
+                                    <p className='text-base'>{'<Booked Hall Name>'}</p>
+                                  </div>
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Contact Number</h2>
+                                    <p className='text-base'>{'<Contact Number of Customer>'}</p>
+                                  </div>
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Booking Name</h2>
+                                    <p className='text-base'>{'<Booking Name>'}</p>
+                                  </div>
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Selected Event Slot</h2>
+                                    <p className='text-base'>{'Timming Slot Evening / Morning'}</p>
+                                    
+                                  </div>
+                                  <div className="txt-bx space-y-1">
+                                  <h2 className='font-semibold text-lg'>Selected Event Date</h2>
+                                    
+                                    <p className='text-base'>{'Date When You Booking'}</p>
+                                  </div>
+                                  
+                                </div>
+                                </div>
+                                {/* <CheckCircleOutlined style={{ fontSize: "10rem", color: "var(--mainColor)" }} />
+                                <h1 className='text-4xl'>Booking Request Received 4</h1>
+                                <p className='text-2xl text-center'>Your Request Send to the Vendor he will Contact you as soon as possible</p> */}
+                                {/* <Link href={'/'}>
+
+                                    <Button type="primary" style={{ width: "120px", height: "fit-content", paddingBlock: "5px" }}>Home</Button>
+                                </Link> */}
+                            </div>
+
+                            <div className="w-11/12 flex justify-end gap-4 items-center mt-8">
+                                <Button className='border-mainColor' style={{ borderColor: "#d5af80", color: 'var(--mainColor)', width: "120px", height: "fit-content", paddingBlock: "5px" }} onClick={() => {
+                                    setsthirdToggle(false), setsfourToggle(true)
+                                }}>Back</Button>
+                                <Button type="primary" style={{ width: "120px", height: "fit-content", paddingBlock: "5px" }} onClick={() => {
+                                    setsfourToggle(true), setsfiveToggle(false);
+                                }}>Next</Button>
+
+                            </div>
+
+
+                        </div>
+                        <div className={`absolute top-10 flex flex-col w-5/6  ${fiveToggle && "hidden"}`}>
                             <div className="w-full flex justify-between flex-col gap-10 mt-5 items-center">
                                 <CheckCircleOutlined style={{ fontSize: "10rem", color: "var(--mainColor)" }} />
                                 <h1 className='text-4xl'>Booking Request Received</h1>
@@ -262,6 +339,8 @@ const BookingSection = () => {
                                     <Button type="primary" style={{ width: "120px", height: "fit-content", paddingBlock: "5px" }}>Home</Button>
                                 </Link>
                             </div>
+
+                            
 
 
                         </div>
