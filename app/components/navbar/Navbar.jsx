@@ -5,7 +5,9 @@ import { Button, ConfigProvider } from "antd";
 import theme from "@/theme/themeConfig";
 import { Switch } from "antd";
 import Link from 'next/link';
+
 import { MenuOutlined ,CloseOutlined,MessageOutlined} from '@ant-design/icons';
+import DropDownUser from './dropDownUser/DropDownUser';
 
 const onChange = (checked) => {
   console.log(`switch to ${checked}`);
@@ -51,6 +53,7 @@ const Navbar = () => {
       <Button type="primary"  >Sign In</Button>
       
       </Link>
+      <DropDownUser/>
       </div>
 
       {/* Mobile menu icon */}
@@ -98,6 +101,7 @@ const Navbar = () => {
         </ul>
       </div>
     </div>
+
   </nav>
 </header>
 
