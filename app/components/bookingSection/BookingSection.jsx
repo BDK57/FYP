@@ -268,31 +268,7 @@ const handleAccordian = (e) => {
                         </div>
                         <div className={`absolute top-10 flex flex-col w-5/6   ${fourToggle && "hidden"}`}>
                             <div className="w-full flex justify-normal flex-col gap-10 mt-5 items-center" style={{ overflowY: "scroll", height: "36vw" }}>
-                                <div className="w-full  grid grid-cols-2 gap-4 border-2 border-dashed border-secColor-800 py-5 px-6 rounded-xl" style={{ boxShadow: "rgba(60, 70, 85, 0.2) 0px 0px 6px 6px inset" }} >
-                                    <div className="txt-bx space-y-1">
-                                        <h2 className='font-semibold text-lg'>Booked Vendor</h2>
-                                        <p className='text-base'>{'<Booked Hall Name>'}</p>
-                                    </div>
-                                    <div className="txt-bx space-y-1">
-                                        <h2 className='font-semibold text-lg'>Contact Number</h2>
-                                        <p className='text-base'>{'<Contact Number of Customer>'}</p>
-                                    </div>
-                                    <div className="txt-bx space-y-1">
-                                        <h2 className='font-semibold text-lg'>Booking Name</h2>
-                                        <p className='text-base'>{'<Booking Name>'}</p>
-                                    </div>
-                                    <div className="txt-bx space-y-1">
-                                        <h2 className='font-semibold text-lg'>Selected Event Slot</h2>
-                                        <p className='text-base'>{'Timming Slot Evening / Morning'}</p>
-
-                                    </div>
-                                    <div className="txt-bx space-y-1">
-                                        <h2 className='font-semibold text-lg'>Selected Event Date</h2>
-
-                                        <p className='text-base'>{'Date When You Booking'}</p>
-                                    </div>
-
-                                </div>
+                               
                                 <div className="w-full flex flex-col items-start justify-between gap-4">
                                     <h3 className='text-start font-semibold text-lg'>Package</h3>
                                     

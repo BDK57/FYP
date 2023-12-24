@@ -56,7 +56,7 @@ const Profile = () => {
           </div>
         </div>
         <div className="px-4 pb-6 text-center lg:pb-8 xl:pb-11.5">
-          <div className="relative flex justify-center z-30 mx-auto -mt-22 h-30 w-full max-w-30 rounded-full bg-white/20 p-1 backdrop-blur sm:h-44 sm:max-w-44 sm:p-3 text-center">
+          <div className="relative flex justify-center z-30 mx-auto -mt-22 h-40 w-full max-w-30 rounded-full bg-white p-1 backdrop-blur sm:h-44 sm:max-w-44 sm:p-3 text-center">
             <div className="absolute drop-shadow-lg mx-auto">
               <Image
                 src={"/assets/images/user/user-06.png"}
@@ -100,25 +100,25 @@ const Profile = () => {
             </div>
           </div>
           <div className="mt-4">
-            <h3 className="mb-1.5 text-2xl font-semibold text-black dark:text-white">
+            <h3 className="mb-1.5 text-2xl font-semibold text-black ">
               Hassan Khan
             </h3>
             <p className="font-medium">Vendor</p>
-            <div className="mx-auto mt-5 mb-5 grid w-1/3 max-w-94 grid-cols-3 rounded-md shadow-md border border-stroke py-2.5 shadow-1 dark:border-strokedark dark:bg-[#37404F]">
-              <div className="flex flex-row items-center justify-center gap-1 border-r border-stroke px-4 dark:border-strokedark xsm:flex-row ">
-                <span className="font-semibold text-black dark:text-white">
+            <div className="mx-auto mt-5 mb-5 grid w-full md:w-1/3 max-w-94 grid-cols-3 rounded-md shadow-md border border-stroke py-2.5 shadow-1 dark:border-strokedark">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-1 border-r border-stroke px-4 dark:border-strokedark xsm:flex-row ">
+                <span className="font-semibold text-black ">
                   259
                 </span>
                 <span className="text-sm">Post Halls</span>
               </div>
-              <div className="flex flex-row items-center justify-center gap-1 border-r border-stroke px-4 dark:border-strokedark xsm:flex-row">
-                <span className="font-semibold text-black dark:text-white">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-1 border-r border-stroke px-4 dark:border-strokedark xsm:flex-row">
+                <span className="font-semibold text-black ">
                   2
                 </span>
                 <span className="text-sm">Halls Book</span>
               </div>
-              <div className="flex flex-row items-center justify-center gap-1 px-4 xsm:flex-row">
-                <span className="font-semibold text-black dark:text-white">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-1 px-4 xsm:flex-row">
+                <span className="font-semibold text-black ">
                   5
                 </span>
                 <span className="text-sm">Booking Pending</span>
@@ -126,7 +126,7 @@ const Profile = () => {
             </div>
 
             <div className="mx-auto max-w-180 ">
-              <h4 className="font-semibold text-black dark:text-white">
+              <h4 className="font-semibold text-black ">
                 About Me
               </h4>
               <p className="mt-4.5">

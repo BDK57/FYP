@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 // import SidebarLinkGroup from "./SidebarLinkGroup"
+import { MenuOutlined ,CloseOutlined,MessageOutlined} from '@ant-design/icons';
 
 import Image from "next/image"
 import SidebarLinkGroup from "../SidebarLinkGroup/SidebarLinkGroup"
@@ -21,52 +22,44 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     storedSidebarExpanded === null ? false : storedSidebarExpanded === "true"
   )
 
-  // close on click outside
-  useEffect(() => {
-    const clickHandler = ({ target }) => {
-      if (!sidebar.current || !trigger.current) return
-      if (
-        !sidebarOpen ||
-        sidebar.current.contains(target) ||
-        trigger.current.contains(target)
-      )
-        return
-      setSidebarOpen(false)
-    }
-    document.addEventListener("click", clickHandler)
-    return () => document.removeEventListener("click", clickHandler)
-  })
 
+  const [sidebarToggle, setsidebarToggle] = useState(false)
+
+
+  const [profileOption, setprofileOption] = useState(false)
+  const handleProfileMenu =()=>{
+    setprofileOption(!profileOption)
+  }
   // close if the esc key is pressed
-  useEffect(() => {
-    const keyHandler = ({ keyCode }) => {
-      if (!sidebarOpen || keyCode !== 27) return
-      setSidebarOpen(false)
-    }
-    document.addEventListener("keydown", keyHandler)
-    return () => document.removeEventListener("keydown", keyHandler)
-  })
+  // useEffect(() => {
+  //   const keyHandler = ({ keyCode }) => {
+  //     if (!sidebarOpen || keyCode !== 27) return
+  //     setSidebarOpen(false)
+  //   }
+  //   document.addEventListener("keydown", keyHandler)
+  //   return () => document.removeEventListener("keydown", keyHandler)
+  // })
 
-  useEffect(() => {
-    localStorage.setItem("sidebar-expanded", sidebarExpanded.toString())
-    if (sidebarExpanded) {
-      document.querySelector("body")?.classList.add("sidebar-expanded")
-    } else {
-      document.querySelector("body")?.classList.remove("sidebar-expanded")
-    }
-  }, [sidebarExpanded])
+  // useEffect(() => {
+  //   localStorage.setItem("sidebar-expanded", sidebarExpanded.toString())
+  //   if (sidebarExpanded) {
+  //     document.querySelector("body")?.classList.add("sidebar-expanded")
+  //   } else {
+  //     document.querySelector("body")?.classList.remove("sidebar-expanded")
+  //   }
+  // }, [sidebarExpanded])
   return (
     <>
    <div className="flex container mx-auto">
 
    <aside
     ref={sidebar}
-    className={`absolute left-0 top-0 mt-10 z-9999 flex h-screen w-1/6 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
-      sidebarOpen ? "translate-x-0" : "-translate-x-full"
+    className={`absolute left-0 top-0 mt-auto md:mt-10 z-[999] flex h-screen w-full md:w-1/6 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+      sidebarToggle ? "translate-x-0" : "-translate-x-full"
     }`}
   >
     {/* <!-- SIDEBAR HEADER --> */}
-    <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
+    <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5 my-8 md:my-0">
       <Link href="/">
         <Image
           width={176}
@@ -78,7 +71,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
       <button
         ref={trigger}
-        onClick={() => setSidebarOpen(!sidebarOpen)}
+        onClick={()=>{
+          setsidebarToggle(!sidebarToggle)
+        }}
         aria-controls="sidebar"
         aria-expanded={sidebarOpen}
         className="block lg:hidden"
@@ -88,7 +83,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           width="20"
           height="18"
           viewBox="0 0 20 18"
-          fill="none"
+          fill="red"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -97,12 +92,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           />
         </svg>
       </button>
+
+      
     </div>
     {/* <!-- SIDEBAR HEADER --> */}
 
     <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
       {/* <!-- Sidebar Menu --> */}
-      <nav className="mt-5 py-4 px-4 lg:mt-9 lg:px-6">
+      <nav className="mt-5 py-4 px-4 md:px-0 lg:mt-9 lg:px-0">
         {/* <!-- Menu Group --> */}
         <div>
           <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
@@ -227,11 +224,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
             {/* <!-- Menu Item Profile --> */}
             <li>
-              <Link
-                href="/profile"
+              <span
+               
                 className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes(
                   "profile"
                 ) && "bg-graydark dark:bg-meta-4"}`}
+                onClick={handleProfileMenu}
               >
                 <svg
                   className="fill-current"
@@ -251,7 +249,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   />
                 </svg>
                 Profile
-              </Link>
+              </span>
             </li>
             {/* <!-- Menu Item Profile --> */}
 
@@ -699,9 +697,21 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       {/* <!-- Sidebar Menu --> */}
     </div>
   </aside>
-
-  <div className="w-5/6">
-<Profile/>
+  <button id="dashboard-menu-icon" className="md:hidden w-fit px-4 flex items-center h-screen">
+        {sidebarToggle ? 
+        <CloseOutlined  onClick={()=>{
+          setsidebarToggle(!sidebarToggle)
+      }} className="shadow-lg"/> :  
+        
+      <MenuOutlined onClick={()=>{
+        setsidebarToggle(!sidebarToggle)
+      }} className="shadow-xl" style={{boxShadow:'10px 10px #fffb'}}/>
+          }
+      </button>
+  <div className="w-5/6 mx-auto">
+  
+  {profileOption && <Profile/>}
+{/* <Profile/> */}
     
   </div>
    </div>
